@@ -348,3 +348,10 @@ class Freenom:
         pub_ip = res.content.decode()
         print(pub_ip)
         return pub_ip
+
+    def getPublicIPv6(self, url='https://api64.ipify.org'):
+        print('PublicIPv6:', end=' ')
+        res = requests.get(url, timeout=self.timeout)
+        pub_ip = res.content.decode()
+        print(pub_ip)
+        return pub_ip
